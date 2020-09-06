@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Successful Registration</title>
+    <style>
+        /* tao vien , can chinh center*/
+        form{
+            border: 1px black solid;
+            width: 70%;
+            margin-right: auto;
+            margin-left: auto;
+            margin-top: 1cm;
+        }
+        /* style cho title */
+        h2{
+            color: red;
+            font-style: italic;
+            font-weight: bold;
+            text-align: center;
+            width: 70%;
+        }
+        /* tao mau label */
+        label{
+            color: rgb(19, 163, 67);
+            font-weight: bolder;
+            font-style: italic;
+        }
+        /* undeco link */
+        a{
+            text-decoration: none;
+            color: black;
+            font-weight: bolder;
+        }
+        #email1{
+            text-decoration: underline;
+            color: rgb(28, 119, 204);
+        }
+  
+    </style>
+</head>
+<body>
+    <form action="" method="GET" id="confirmation_form">
+        <table>
+            <h2>Student Information Successful Registration</h2>
+            <!-- name -->
+            <tr>
+                <td style="width: 70%;"><label for="name1">Name</label></td>
+                <td id="name1">
+                    <script>
+                    document.getElementById("name1").innerHTML =  sessionStorage.getItem("name")
+                     </script>
+                </td>
+            </tr>
+            <!-- gender -->
+            <tr>
+                <td><label for="gender1">Gender</label></td>
+                <td id="gender1">
+                    <script>
+                        document.getElementById("gender1").innerHTML =  sessionStorage.getItem("gender")
+                    </script>
+                </td>
+            </tr>
+            <!-- address -->
+            <tr>
+                <td><label for="address1">Address</label></td>
+                <td id="address1">
+                    <script>
+                        document.getElementById("address1").innerHTML =  sessionStorage.getItem("address")
+                    </script>
+                </td>
+            </tr>
+            <!-- email -->
+            <tr>
+                <td><label for="email1">Email</label></td>
+                <td id="email1">
+                    <script>
+                        document.getElementById("email1").innerHTML =  sessionStorage.getItem("email")
+                    </script>
+                </td>
+            </tr>
+            <!-- phone -->
+            <tr>
+                <td><label for="phone1">Phone</label></td>
+                <td id="phone1">
+                    <script>
+                        document.getElementById("phone1").innerHTML =  sessionStorage.getItem("phone")
+                    </script>
+                </td>
+            </tr>
+            <!-- qualification -->
+            <tr>
+                <td><label for="qualification1">Qualification</label></td>
+                <td id="qualification1">
+                    <script>
+                        document.getElementById("qualification1").innerHTML =  sessionStorage.getItem("qualification")
+                    </script>
+                </td>
+            </tr>
+            <!-- return link-->
+            <tr>
+                <td colspan="2">
+                    <a href="./form.html">Click here to return to Student Page</a>
+                </td>
+            </tr>
+        </table>
+    </form>
+    
+</body>
+</html>

@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>STUDENT INFORMATION</title>
+    <style>
+        /* chieu cao cho row */
+        tr {
+            height: 1cm;
+        }
+
+        /* border radius cho table */
+        table {
+            border: 1px black solid;
+            border-radius: 5%;
+            box-shadow: rgb(178, 178, 207) 3px 3px;
+            margin-top: 3cm;
+            margin-left: auto;
+            margin-right: auto;
+            padding: 0.5cm 1cm;
+        }
+
+        /* can chinh title */
+        h2 {
+            color: green;
+            font-weight: bolder;
+            text-shadow: rgb(194, 224, 149) 1px 1px;
+            text-align: center;
+        }
+
+        /* chinh mau label */
+        label {
+            color: rgb(167, 11, 11);
+            font-weight: bolder;
+        }
+
+        /* chinh mau submit */
+        input[type=submit] {
+            background-color: red;
+            color: white;
+            border-radius: 13%;
+            padding: 0 10%;
+        }
+
+        /* chinh mau reset */
+        input[type=reset] {
+            background-color: rgb(34, 37, 185);
+            color: white;
+            border-radius: 13%;
+            padding: 0 10%;
+        }
+    </style>
+</head>
+
+<body>
+    <form action="./export_formfilled.html" method="GET" id="student_information_form">
+        <table>
+            <!-- Title horizon -->
+            <tr>
+                <td colspan="2">
+                    <h2>Student Information</h2>
+                    <hr>
+                </td>
+            </tr>
+            <!-- name -->
+            <tr>
+                <td><label for="name">Name</label></td>
+                <td><input type="text" name="name" id="name" placeholder="12_45six" required pattern="(\w|\s$){6,30}"
+                        title="Name has from 6 to 30 letter characters, including space."></td>
+            </tr>
+            <!-- gender -->
+            <tr>
+                <td><label for="gender">Gender</label></td>
+                <td>
+                    <input type="radio" name="gender" id="gender" value="Male" checked> Male
+                    <input type="radio" name="gender" id="gender" value="Female"> Female
+                </td>
+            </tr>
+            <!-- address -->
+            <tr>
+                <td><label for="address">Address</label></td>
+                <td><input type="text" name="address" id="address" placeholder="sdada"></td>
+            </tr>
+            <!-- email -->
+            <tr>
+                <td><label for="email">Email</label></td>
+                <td><input type="email" name="email" id="email" placeholder="xxx@xxxx.xxx" required
+                        pattern="(\w{3})@(\w{4})[.](\w{3})$" title="email must be in [xxx@xxxx.xxx] format"></td>
+            </tr>
+            <!-- phone -->
+            <tr>
+                <td><label for="phone">Phone</label></td>
+                <td><input type="text" name="phone" id="phone" placeholder="xxx-xxxxx-xxx" required
+                        pattern="\d{3}[-]\d{5}[-]\d{3}$" title="Phone has format xxx-xxxxx[-]xxx"></td>
+            </tr>
+            <!-- qualification -->
+            <tr>
+                <td><label for="qualification">Qualification</label></td>
+                <td>
+                    <select name="qualification" id="qualification">
+                        <option value="">---Select---</option>
+                        <option value="Bachelor Degree">Bachelor Degree</option>
+                        <option value="Master">Master</option>
+                        <option value="PhD">PhD</option>
+                        <option value="None">None</option>
+                    </select>
+                </td>
+            </tr>
+            <!-- submit reset -->
+            <tr>
+                <td colspan="2">
+                    <input type="submit" value="Submit">
+                    <input type="reset" value="Reset">
+                </td>
+            </tr>
+        </table>
+    </form>
+    <br>
+    <!-- homepage -->
+    <span style="margin: 0 48%">
+        <a href="./pretest3.html"><img src="../MEDIA/PHOTO/home.png" alt="" width="5%"></a>
+    </span>
+
+    <script>
+        document.getElementById("student_information_form").onsubmit = function () {
+            var form = document.getElementById("student_information_form");
+            var name = form.name.value;
+            var gender = form.gender.value;
+            var address = form.address.value;
+            var email = form.email.value;
+            var phone = form.phone.value;
+            var qualification = form.qualification.value;
+
+            sessionStorage.setItem("name", name);
+            sessionStorage.setItem("gender", gender);
+            sessionStorage.setItem("address", address);
+            sessionStorage.setItem("email", email);
+            sessionStorage.setItem("phone", phone);
+            sessionStorage.setItem("qualification", qualification);
+        }
+    </script>
+</body>
+
+</html>

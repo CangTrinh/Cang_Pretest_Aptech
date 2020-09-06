@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CONTACT</title>
+    <style>
+        /* Can chinh title logo */
+        span {
+            color: darkgray;
+            font-size: 3rem;
+            font-weight: bolder;
+            text-shadow: rgb(87, 83, 83) 2px 3px 3px;
+        }
+
+        /* Can chinh align cho cac title */
+        #navigationBar th {
+            font-family: 'Courier New', Courier, monospace;
+            width: 23.6%;
+        }
+
+        a {
+            text-decoration: none;
+            color: black;
+        }
+
+        span.required {
+            color: red;
+            font-size: 1.3rem;
+        }
+
+        div{
+            display: block;
+            margin: 0 30%;
+        }
+        input:required {
+            border: 1px rgb(209, 197, 197) solid;
+            border-bottom: 1.5px blue solid;
+        }
+        input[type=reset], input[type=submit]{
+            border: none;
+            color: white;
+            background-color: blue;
+            border-radius: 8px;
+            font-size: 1rem;
+            margin-top: .5cm;
+            box-shadow: black 1px 1px 3px;
+        }
+        h2{
+            color: red;
+            text-shadow: 1px 1px 3px rgb(121, 117, 117);
+            font-size: 1.7rem;
+        }
+    </style>
+</head>
+
+<body>
+    <header id="banner">
+        <img src="./MEDIA/logo.jpg" alt="logo" width="10%" id="logo">
+        <span>Amazing Bridges</span>
+    </header>
+    <!-- Tao navigationBar table de can chinh title -->
+    <table id="navigationBar">
+        <tr>
+            <th><a href="./pretest4.html">HOME</a></th>
+            <th>WORLD BRIDGES</th>
+            <th>TOP LONGEST</th>
+            <th>TOP HIGHEST</a> </th>
+            <th><a href="./contact.html">CONTACT</a></th>
+        </tr>
+    </table>
+    <br>
+    <hr>
+    <!-- Tao div chua form1 chua 2 fieldset -->
+    <div class="container">
+        <h2>Contact us</h2>
+        <!-- tao form1 -->
+        <form action="" id="form1" method="POST">
+            <!-- fieldset1 -->
+            <fieldset id="fieldset1" style="margin-right: 0em;">
+                <legend>Your Details:</legend>
+                <!-- name -->
+                <label for="name">Name</label>
+                <input type="text" name="name" id="name" required pattern="(\w|\s){3,}" title="Name has at least 3 characters including letters or space."> <span class="required">*</span>
+                <br>
+                <!-- email -->
+                <label for="email">Email</label>
+                <input type="email" name="email" id="email" required> <span class="required">*</span>
+                <br>
+            </fieldset>
+            <br>
+            <!-- fieldset2 -->
+            <fieldset id="fieldset2" style="margin-right: 0em;">
+                <legend>Your Review:</legend>
+                <!-- sources -->
+                <label for="sources">How did you hear about us?</label>
+                <select name="sources" id="sources">
+                    <option value="">---Select---</option>
+                    <option value="Google">Google</option>
+                    <option value="Friend">Friend</option>
+                    <option value="Advert">Advert</option>
+                    <option value="Other">Other</option>
+                </select>
+                <br>
+                <!-- visit -->
+                <label for="visit">Would you visit again?</label>
+                <input type="radio" name="visit" id="visit" value="Yes"> Yes
+                <input type="radio" name="visit" id="visit" value="No"> No
+                <input type="radio" name="visit" id="visit" value="Maybe"> Maybe
+                <br>
+                <!-- comment -->
+                <label for="comment">Comment</label>
+                <br>
+                <textarea name="comment" id="comment" cols="30" rows="10"></textarea>
+                <br>
+                <!-- update -->
+                <input type="checkbox" name="update" id="update" checked value="Yes">
+                <label for="update">Sign me up for email updates</label>
+                <br>
+                <input type="submit" value="Submit review">
+                <input type="reset" value="Reset">
+            </fieldset>
+        </form>
+        <br>
+    </div>
+    <footer>
+        <p style="text-align: center; text-decoration: double; text-shadow: 2mm black;" style="margin-top: 0rem;">
+            Copyright &copy by ABC Team - April, 2020
+        </p>
+    </footer>
+    <script>
+        document.getElementById("form1").onsubmit = function(){
+            var form = document.getElementById("form1");
+            alert(
+                "Thank you for submit! \n"+
+                "Name: " + form.name.value + "\n" +
+                "Email: " + form.email.value + "\n" + 
+                "How did you hear about us?: " + form.sources.value + "\n" + 
+                "Would you visit again?: " + form.visit.value + "\n" + 
+                "Comment: " + form.comment.value + "\n" + 
+                "Sign me up for email updates: " + form.update.value + "\n"
+            );
+            return false;
+        }
+    </script>
+</body>
+</html>
