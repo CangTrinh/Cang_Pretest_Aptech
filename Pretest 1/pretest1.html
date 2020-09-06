@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" Pretest_1_Shopee="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+                /* Font google cho dep mat */
+                @font-face {
+            font-family: 'Nunito', sans-serif;
+            src: url("https://fonts.googleapis.com/css2?family=Nunito:wght@200&display=swap");
+        }
+        html{
+            font-family: Nunito;
+        }
+        /* Banner OnlineShopNow */
+        #banner{
+            width: 100%;
+            font-size: 50px;
+            font-weight: 900;
+            text-align: center;
+            background-color: darkgreen;
+            color: white;
+            display: inline-block;
+            vertical-align: middle;
+        }
+        /* Incon gio hang nam inline voi Banner */
+        #icon{
+            mix-blend-mode: multiply;
+            display: inline-block;
+            vertical-align: middle;
+        }
+        /* Can chinh chieu dai tung menu */
+        #navigationBar th{
+            width: 19%;
+        }
+        /* Can chinh mau sac o menu va border */
+        #navigationBar{
+            text-align: center; 
+            font-size: 1rem;
+            color: darkgreen; 
+            width: 100%;
+            border: .5mm green solid;
+            border-bottom: 1mm green solid;
+        }
+        /* Hieu ung hover cho cac lien ket */
+        a{
+            display: block;
+            text-decoration: none; 
+            color: darkgreen;
+            transition-duration: 800ms;
+        }
+        a:hover{
+            
+            transition-duration: 800ms;
+            background-color: darkgreen;
+            color: white;
+            transform: perspective(50%);
+        }
+        /* Can chinh table thanh khoi inline */
+        #formTable {
+            border: .5px rgb(9, 179, 65) solid;
+            display: inline-table;
+            width: 65%;
+            margin: 1cm 17%; 
+            /* width: 65 + margin left+ margin right = 99% --> con lai 5% */
+        }
+        /* Can chinh mau sac cho th thuoc formTable */
+        #formTable th {
+            background-color: darkgreen;
+            color: white;
+        }
+        /* Tao ra de khi co su co format */
+        td{
+            border: none;
+        }
+        /* Can chinh chieu dai (% so voi o chua no ) va mau sac input */
+        #fullName, #address , #email, #phoneNumber, #city {
+            width: 98%;
+            border: .5px rgb(241, 110, 70) solid;
+        }
+        /* Can chinh chieu dai textArea (% so voi o chua no) */
+        textarea{
+            width: 98%;
+        }
+        /* Can chinh nut submit va reset o giua */
+        #submit, #reset{
+            background-color: rgb(235, 235, 232);
+            display: inline;
+            position: relative;
+            left: 43%;
+            border-radius: 10px;
+            border: 3px darkgreen double;
+        }
+        /* Can chinh canh bao do tuoi newAge */
+        #alertAge{
+            font-style: italic;
+            font-size: smaller;
+            color: rgb(201, 67, 67);
+        }
+    </style>
+</head>
+<body>
+
+    <header id="banner">
+        Online Shop Now
+        <img src="../MEDIA/PHOTO/TROLLY.png" alt="trolly" width="7%" id="icon">
+    </header>
+
+    <table id="navigationBar">
+        <tr>
+            <th><a href="../index.html">HOME</a> </th>
+            <th>PRODUCTS</th>
+            <th>SHOPS</th>
+            <th> <a href="/Pretest 1/form1.html">REGISTER</a> </th>
+            <th>SIGN IN</th>
+        </tr>
+    </table>
+<div>
+    <img src="https://static.vecteezy.com/system/resources/previews/000/274/087/original/shop-now-vector.jpg" alt="" width="90%" style="padding: 2rem;" id="logo">
+</div>
+<footer>
+    <p style="text-align: center; text-decoration: double; text-shadow: 2mm black;" style="margin-top: 0rem;">
+        Shop Now &copy Copyright 2017. All rights reserved
+    </p>
+</footer>
+</body>
+</html>
